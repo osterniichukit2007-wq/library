@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бібліотека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Бібліотека</h1>
+
+        <div class="form-block">
+            <h2>Додати книгу</h2>
+            <input type="text" id="titleInput" placeholder="Введіть назву книги">
+            <input type="text" id="authorInput" placeholder="Введіть автора книги">
+            <button onclick="addBook()">Додати</button>
+        </div>
+
+        <div class="search-block">
+            <h2>Пошук книги</h2>
+            <input type="text" id="searchInput" placeholder="Введіть назву для пошуку" oninput="searchBook()">
+        </div>
+
+        <div class="list-block">
+            <h2>Список книг</h2>
+            <ul id="bookList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
