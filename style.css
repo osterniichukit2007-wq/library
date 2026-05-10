@@ -1,96 +1,253 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f6e7d8, #e8d5c4, #f8f1eb);
     margin: 0;
     padding: 0;
+    color: #3a2a22;
+}
+
+.menu {
+    background: rgba(76, 47, 35, 0.95);
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.menu button {
+    width: auto;
+    margin: 0 8px;
+    padding: 11px 22px;
+    background: #f3c98b;
+    color: #3a2a22;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background: #ffdd9e;
+    transform: translateY(-2px);
 }
 
 .container {
-    width: 500px;
+    width: 720px;
     margin: 40px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.94);
+    padding: 42px;
+    border-radius: 28px;
+    box-shadow: 0 18px 40px rgba(70, 45, 30, 0.22);
 }
 
-h1, h2 {
+.hidden {
+    display: none;
+}
+
+h1 {
     text-align: center;
+    font-size: 42px;
+    color: #4b2e20;
+    margin: 0 0 18px;
 }
 
-.form-block,
+h2 {
+    color: #8a5a3c;
+    font-size: 24px;
+    margin: 28px 0 12px;
+}
+
+.advertising-text {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    background: #fff7ec;
+    padding: 24px;
+    border-radius: 18px;
+    border-left: 6px solid #d89b58;
+}
+
 .search-block,
 .list-block {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
+}
+
+#catalogPage {
+    max-width: 100%;
+}
+
+#catalogPage h1 {
+    margin-bottom: 16px;
+}
+
+#catalogPage .search-block h2,
+#catalogPage .list-block h2 {
+    text-align: left;
+    padding-left: 4px;
+}
+
+#catalogPage .search-block {
+    margin-top: 20px;
+}
+
+#catalogPage .list-block {
+    margin-top: 16px;
+}
+
+#catalogPage > button {
+    margin-bottom: 28px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 14px 16px;
     margin-top: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 2px solid #ead6bf;
+    border-radius: 16px;
     box-sizing: border-box;
     font-size: 16px;
+    background: #fffaf5;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #c98545;
+    box-shadow: 0 0 0 4px rgba(201, 133, 69, 0.18);
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
+    padding: 14px;
+    background: linear-gradient(135deg, #8b5e3c, #c98545);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 16px;
     cursor: pointer;
     font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #74492e, #b87537);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(120, 75, 40, 0.25);
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #555, #333);
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 8px;
 }
 
 .book-item {
-    background: #e9e9e9;
-    margin-bottom: 10px;
-    padding: 12px 14px;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #fff7ec, #f2dfc8);
+    margin-bottom: 14px;
+    padding: 16px 20px;
+    border-radius: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    border-left: 6px solid #c98545;
+    box-shadow: 0 5px 14px rgba(80, 50, 30, 0.12);
+    transition: 0.3s;
+}
+
+.book-item:hover {
+    transform: scale(1.015);
 }
 
 .book-title {
-    font-size: 18px;
-    color: #222;
+    font-size: 19px;
+    color: #3a2a22;
     word-break: break-word;
+    font-weight: 500;
+}
+
+.edit-btn {
+    width: auto;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #3f7cac, #5dade2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #2d5d84, #3498db);
+}
+
+.empty-item {
+    background: #fff7ec;
+    padding: 16px;
+    border-radius: 14px;
+    text-align: center;
+    color: #8a5a3c;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 25px auto;
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .menu button {
+        margin-bottom: 8px;
+    }
+
+    .book-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .edit-btn {
+        width: 100%;
+    }
+}
+
+.button-block {
+    display: flex;
+    gap: 10px;
 }
 
 .delete-btn {
     width: auto;
-    padding: 8px 14px;
-    background-color: #d9534f;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #c94b4b, #e35d5d);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 14px;
     flex-shrink: 0;
 }
 
 .delete-btn:hover {
-    background-color: #c9302c;
-}
-
-.empty-item {
-    background: #e9e9e9;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
+    background: linear-gradient(135deg, #a73737, #d94c4c);
 }
