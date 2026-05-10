@@ -7,25 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Бібліотека</h1>
 
-        <div class="form-block">
-            <h2>Додати книгу</h2>
+    <nav class="menu">
+        <button onclick="showHome()">Головна</button>
+        <button onclick="showCatalog()">Каталог книжок</button>
+    </nav>
+
+    <div class="container">
+
+        <section id="homePage">
+            <h1>Бібліотека</h1>
+            <h2>Рекламна сторінка бібліотеки</h2>
+            <p class="advertising-text">
+                Ласкаво просимо до нашої бібліотеки! 
+            </p>
+        </section>
+
+        <section id="catalogPage" class="hidden">
+            <h1>Каталог книжок</h1>
+
+            <button onclick="showBookForm()">Додати книжку</button>
+
+            <div class="search-block">
+                <h2>Пошук книги</h2>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Пошук" 
+                    oninput="searchBook()"
+                >
+            </div>
+
+            <div class="list-block">
+                <h2>Список книг</h2>
+                <ul id="bookList"></ul>
+            </div>
+        </section>
+
+        <section id="formPage" class="hidden">
+            <h1 id="formTitle">Додати книжку</h1>
+
             <input type="text" id="titleInput" placeholder="Введіть назву книги">
             <input type="text" id="authorInput" placeholder="Введіть автора книги">
-            <button onclick="addBook()">Додати</button>
-        </div>
 
-        <div class="search-block">
-            <h2>Пошук книги</h2>
-            <input type="text" id="searchInput" placeholder="Введіть назву для пошуку" oninput="searchBook()">
-        </div>
+            <button onclick="saveBook()">Зберегти</button>
+            <button class="back-btn" onclick="showCatalog()">Назад до каталогу</button>
+        </section>
 
-        <div class="list-block">
-            <h2>Список книг</h2>
-            <ul id="bookList"></ul>
-        </div>
     </div>
 
     <script src="script.js"></script>
